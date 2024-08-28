@@ -168,6 +168,11 @@ New checks
   to reading out-of-bounds data due to inadequate or incorrect string null
   termination.
 
+- New :doc:`misc-printer
+  <clang-tidy/checks/misc/printer>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`misc-use-internal-linkage
   <clang-tidy/checks/misc/use-internal-linkage>` check.
 

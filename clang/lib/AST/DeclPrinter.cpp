@@ -602,9 +602,13 @@ void DeclPrinter::VisitRecordDecl(RecordDecl *D) {
     Out << ' ' << *D;
 
   if (D->isCompleteDefinition()) {
-    Out << " {\n";
-    VisitDeclContext(D);
-    Indent() << "}";
+    if (Policy.TerseOutput) {
+      Out << " {}";
+    } else {
+      Out << " {\n";
+      VisitDeclContext(D);
+      Indent() << "}";
+    }
   }
 }
 
